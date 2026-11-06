@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>需要开启代理 · Claude Proxy Guard</title>
+    <link rel="stylesheet" href="check.css">
+    <script src="check.js" defer></script>
+  </head>
+  <body>
+    <main class="panel">
+      <div class="shield" aria-hidden="true">!</div>
+      <p class="eyebrow">CLAUDE PROXY GUARD</p>
+      <h1 id="title">正在检查代理连接</h1>
+      <p id="description" class="description">正在尝试访问 Google。检查通过后才会打开目标网站。</p>
+      <div class="target-row">
+        <span class="target-label">目标网站</span>
+        <strong id="target">正在读取网址…</strong>
+      </div>
+      <div id="status" class="status" role="status" aria-live="polite">
+        <span class="spinner" aria-hidden="true"></span>
+        <span id="status-text">正在检测 Google 连接…</span>
+      </div>
+      <button id="retry" type="button" hidden>重新检测</button>
+      <p class="footnote">检测失败时，目标网站不会被打开。</p>
+    </main>
+  </body>
+</html>
