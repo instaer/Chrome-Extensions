@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Claude Proxy Guard",
+  "version": "1.0.0",
+  "description": "Checks Google connectivity before opening Claude and Anthropic-related websites.",
+  "minimum_chrome_version": "101",
+  "permissions": [
+    "declarativeNetRequest",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://www.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "check.html",
+        "check.js",
+        "check.css"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_title": "Claude Proxy Guard"
+  }
+}
